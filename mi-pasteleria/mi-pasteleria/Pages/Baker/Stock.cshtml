@@ -1,0 +1,87 @@
+﻿@page
+@using Models
+@model StockModel
+@{
+    ViewBag.Title = "Stock";
+    List<Stock> stocks = new List<Stock> {
+        new Stock() { id = 1, name = "Chocolate", productType = "Sabor", quantity = "50" },
+        new Stock() { id = 2, name = "Vainilla", productType = "Sabor", quantity = "50" },
+        new Stock() { id = 3, name = "Red Velvet", productType = "Sabor", quantity = "50" },
+        new Stock() { id = 4, name = "Almendra", productType = "Sabor", quantity = "50" },
+        new Stock() { id = 5, name = "Limón", productType = "Sabor", quantity = "50" },
+        new Stock() { id = 6, name = "Champagne", productType = "Sabor", quantity = "50" },
+        new Stock() { id = 7, name = "Zanahoria", productType = "Sabor", quantity = "50" },
+        new Stock() { id = 8, name = "Caramelo", productType = "Sabor", quantity = "50" },
+        new Stock() { id = 9, name = "Calabaza", productType = "Sabor", quantity = "50" },
+        new Stock() { id = 10, name = "Crema batida", productType = "Cobertura", quantity = "50" },
+        new Stock() { id = 11, name = "Fondant", productType = "Cobertura", quantity = "50" },
+        new Stock() { id = 12, name = "Buttercream", productType = "Cobertura", quantity = "50" },
+        new Stock() { id = 13, name = "Meregue", productType = "Cobertura", quantity = "50" },
+        new Stock() { id = 14, name = "Ganache", productType = "Cobertura", quantity = "50" },
+        new Stock() { id = 15, name = "Queso crema", productType = "Cobertura", quantity = "50" },
+        new Stock() { id = 16, name = "Materia prima para numeros", productType = "Adorno", quantity = "50" },
+        new Stock() { id = 17, name = "Materia prima para letras", productType = "Adorno", quantity = "50" },
+        new Stock() { id = 18, name = "Maßteria prima para personajes", productType = "Adorno", quantity = "50" }
+    };
+}
+
+<section class="py-20 bg-white">
+    <div class="container max-w-6xl mx-auto">
+        <h2 class="mb-4 text-4xl font-bold tracking-tight text-center">Lista de pedidos</h2>
+        <div class="container justify-center mx-auto overflow-y-auto">
+            <div class="flex flex-col">
+                <div class="w-full">
+                    <div class="border-b border-gray-200 shadow">
+                        <table id="myTable">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-2 text-xs text-gray-500">
+                                        ID
+                                    </th>
+                                    <th class="px-6 py-2 text-xs text-gray-500">
+                                        Proucto
+                                    </th>
+                                    <th class="px-6 py-2 text-xs text-gray-500">
+                                        Tipo de Producto
+                                    </th>
+                                    <th class="px-6 py-2 text-xs text-gray-500">
+                                        Cantidad
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white">
+                                @foreach (var item in stocks)
+                                {
+                                    <tr class="whitespace-nowrap">
+                                        <td class="px-6 py-4 text-sm text-gray-500">
+                                            @Html.DisplayFor(modelItem => item.id)
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <div class="text-sm text-gray-900">
+                                                @Html.DisplayFor(modelItem => item.name)
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <div class="text-sm text-gray-500">
+                                                @Html.DisplayFor(modelItem => item.productType)
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">
+                                            @Html.DisplayFor(modelItem => item.quantity)
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    $(document).ready(function () {
+        $('#myTable').DataTable();
+    });
+</script>

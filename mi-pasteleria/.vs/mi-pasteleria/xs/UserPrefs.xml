@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{8ED59B03-CAAD-436C-92E1-FB1D1ACA2700}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="mi-pasteleria" expanded="True">
+            <Node name="mi-pasteleria" expanded="True">
+              <Node name="Models" expanded="True">
+                <Node name="Order.cs" selected="True" />
+              </Node>
+              <Node name="Pages" expanded="True">
+                <Node name="Baker" expanded="True" />
+                <Node name="Catalogue" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.mi-pasteleria PreferredExecutionTarget="/Applications/Brave Browser.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

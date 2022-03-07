@@ -1,0 +1,140 @@
+﻿@page
+@using System.Globalization;
+@model PaymentModel
+@{
+    ViewBag.Title = "Realizar Pago";
+}
+
+<div class="grid place-items-center">
+    <div class="mt-10 sm:mt-0">
+        <div class="px-4 sm:px-0">
+            <h3 class="text-center text-lg font-medium leading-6 text-gray-900">Selecciona la sucursal y realiza el pago</h3>
+            <p class="text-center mt-1 text-sm text-gray-600">Puedes seleccionar la sucursal y método de pago de tu preferencia.</p>
+        </div>
+        <form name="armar" method="POST">
+            <div class="shadow overflow-hidden sm:rounded-md">
+                <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+                    <fieldset>
+                        <div>
+                            <legend class="text-base font-medium text-gray-900">Método de pago</legend>
+                            <p class="text-sm text-gray-500">Selecciona entre lo siguientes métodos de pago.</p>
+                        </div>
+                        <div class="mt-4 space-y-4">
+                            <div class="grid grid-cols-2">
+                                <div class="flex items-start mb-2">
+                                    <div class="flex items-center h-5">
+                                        <input id="paypal" name="metodopago" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                                    </div>
+                                    <div class="ml-3 text-sm">
+                                        <label for="paypal" class="font-medium text-gray-700">Paypal</label>
+                                        <div class="w-20 h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
+                                            <img src="~/img/metodo-paypal.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start mb-2">
+                                    <div class="flex items-center h-5">
+                                        <input id="mercadopago" name="metodopago" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                                    </div>
+                                    <div class="ml-3 text-sm">
+                                        <label for="mercadopago" class="font-medium text-gray-700">Mercado Pago</label>
+                                        <div class="w-20 h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
+                                            <img src="~/img/metodo-mercadopago.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div>
+                            <legend class="text-base font-medium text-gray-900">Sucursal y disponibilidad</legend>
+                            <p class="text-sm text-gray-500">La siguientes sucursales tienen el pastel disponible.</p>
+                            <p class="text-right text-sm text-gray-500">(Disponibilidad de en sucursal para Hoy: @DateTime.Now.ToString("dd/MMMM/yyyy", new CultureInfo("es-ES"))</p>
+                        </div>
+                        <div class="mt-4 space-y-4">
+                            <div class="grid grid-cols-1">
+                                <div class="flex items-start mb-2">
+                                    <div class="flex items-center h-5">
+                                        <input id="matriz" name="sucursal" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                                    </div>
+                                    <div class="ml-3 text-sm">
+                                        <label for="matriz" class="font-medium text-gray-700">Matriz</label>
+                                        <p class="text-sm text-gray-500">Plutarco Elías Calles 200, Viejo Roble, 66418 San Nicolás de los Garza, N.L.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start mb-2">
+                                    <div class="flex items-center h-5">
+                                        <input id="sucursal1" name="sucursal" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                                    </div>
+                                    <div class="ml-3 text-sm">
+                                        <label for="sucursal1" class="font-medium text-gray-700">Sucursal 1</label>
+                                        <p class="text-sm text-gray-500">Av. Republica Mexicana 400, Rincón de las Puentes, 66460 San Nicolás de los Garza, N.L.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start mb-2">
+                                    <div class="flex items-center h-5">
+                                        <input id="sucursal2" name="sucursal" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                                    </div>
+                                    <div class="ml-3 text-sm">
+                                        <label for="sucursal2" class="font-medium text-gray-700">Sucursal 2</label>
+                                        <p class="text-sm text-gray-500">Av. Diego Díaz de Berlanga 405, Valle de San Carlos, 66437 San Nicolás de los Garza, N.L.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start mb-2">
+                                    <div class="flex items-center h-5">
+                                        <input id="sucursal3" name="sucursal" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                                    </div>
+                                    <div class="ml-3 text-sm">
+                                        <label for="sucursal3" class="font-medium text-gray-700">Sucursal 3</label>
+                                        <p class="text-sm text-gray-500">Palacio de Justicia 151, Anáhuac, 66450 San Nicolás de los Garza, N.L.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start mb-2">
+                                    <div class="flex items-center h-5">
+                                        <input id="sucursal4" name="sucursal" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                                    </div>
+                                    <div class="ml-3 text-sm">
+                                        <label for="sucursal4" class="font-medium text-gray-700">Sucursal 4</label>
+                                        <p class="text-sm text-gray-500">Av. de la Concordia 1300, Santa Isabel, 66612 Cd Apodaca, N.L.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div>
+                            <legend class="text-base font-medium text-gray-900">Datos del cliente</legend>
+                            <p class="text-sm text-gray-500">Por ultimo, requerimos estos datos para lavantar la orden.</p>
+                        </div>
+                        <div class="mt-4 space-y-4">
+                            <div class="grid grid-cols-1">
+                                <div class="flex items-start mb-2">
+                                    <div class="ml-3 text-sm mb-2">
+                                        <label for="nombrecliente" class="font-medium text-gray-700">Nombre</label>
+                                        <input type="text" name="nombrecliente" id="valpersonaje" autocomplete="off" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                    </div>
+                                </div>
+                                <div class="flex items-start mb-2">
+                                    <div class="ml-3 text-sm mb-2">
+                                        <label for="telefonocliente" class="font-medium text-gray-700">Telefono</label>
+                                        <input type="tel" name="fechaentrega" id="telefonocliente" autocomplete="off" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                    </div>
+                                </div>
+                                <div class="flex items-start mb-2">
+                                    <div class="ml-3 text-sm mb-2">
+                                        <label for="clientehorarioatencion" class="font-medium text-gray-700">Horario para contactar</label>
+                                        <input type="text" name="clientehorarioatencion" id="telefonocliente" autocomplete="off" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+                    <button asp-page-handler="Ordered" type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Pagar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

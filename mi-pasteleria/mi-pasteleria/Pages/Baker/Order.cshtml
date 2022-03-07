@@ -1,0 +1,118 @@
+﻿@page
+@using Models
+@model OrderModel
+@{
+    ViewBag.Title = "Pedidos";
+    List<Order> orders = new List<Order>
+    {
+        new Order() { id = 1, orderType = "Personlizado", productDesc = "Pastel personalizado", flavor1 = "Vainilla", flavor2 = "Chocolate", cover = "Crema batida", addOn1 = "Numeros: 2022", addOn2 = "Letras: Feliz cumpleaños Rocko", clientName = "Rolando Davila Lucero", clientPhone = "8128734567", clientSchedule = "De 12pm a 4pm - Diario", status = "Listo" },
+        new Order() { id = 2, orderType = "Personlizado", productDesc = "Pastel personalizado", flavor1 = "Vainilla", flavor2 = "Chocolate", cover = "Crema batida", addOn1 = "Numeros: 22", addOn2 = "Personaje: Clint Eastwood", clientName = "Roberto Escalante Soza", clientPhone = "8128234569", clientSchedule = "De 1pm a 2pm - Diario", status = "Elaborando" },
+        new Order() { id = 3, orderType = "Personlizado", productDesc = "Pastel de Catalogo", flavor1 = "Nevado de fresa", flavor2 = "N/A", cover = "N/A", addOn1 = "N/A", addOn2 = "Mensaje: Felicidades por el ascenso", clientName = "Julieta Rocío Peralta", clientPhone = "8128633567", clientSchedule = "De 12pm a 1pm - Diario", status = "Elaborando" },
+        new Order() { id = 4, orderType = "Personlizado", productDesc = "Pastel de Catalogo", flavor1 = "Chocola tortuga", flavor2 = "N/A", cover = "n/A", addOn1 = "N/A", addOn2 = "Personaje: Spider-Man", clientName = "Melissa Rojas", clientPhone = "8178734569", clientSchedule = "De 1pm a 2pm - Diario", status = "Entregado" }
+    };
+}
+
+<section class="py-20 bg-white">
+    <div class="container max-w-6xl mx-auto">
+        <h2 class="mb-4 text-4xl font-bold tracking-tight text-center">Lista de pedidos</h2>
+        <div class="container justify-center mx-auto overflow-y-auto">
+            <div class="flex flex-col">
+                <div class="w-full">
+                    <div class="border-b border-gray-200 shadow">
+                        <table id="myTable">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-2 text-xs text-gray-500">
+                                        ID
+                                    </th>
+                                    <th class="px-6 py-2 text-xs text-gray-500">
+                                        Tipo de Pedido
+                                    </th>
+                                    <th class="px-6 py-2 text-xs text-gray-500">
+                                        Tipo de Producto
+                                    </th>
+                                    <th class="px-6 py-2 text-xs text-gray-500">
+                                        Sabor 1
+                                    </th>
+                                    <th class="px-6 py-2 text-xs text-gray-500">
+                                        Sabor 2
+                                    </th>
+                                    <th class="px-6 py-2 text-xs text-gray-500">
+                                        Cobertura
+                                    </th>
+                                    <th class="px-6 py-2 text-xs text-gray-500">
+                                        Adorno 1
+                                    </th>
+                                    <th class="px-6 py-2 text-xs text-gray-500">
+                                        Adorno 2
+                                    </th>
+                                    <th class="px-6 py-2 text-xs text-gray-500">
+                                        Cliente
+                                    </th>
+                                    <th class="px-6 py-2 text-xs text-gray-500">
+                                        Telefono Cliente
+                                    </th>
+                                    <th class="px-6 py-2 text-xs text-gray-500">
+                                        Horario Contacto Cliente
+                                    </th>
+                                    <th class="px-6 py-2 text-xs text-gray-500">
+                                        Estatus
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white">
+                                @foreach (var item in orders)
+                                {
+                                    <tr class="whitespace-nowrap">
+                                        <td class="px-6 py-4 text-sm text-gray-500">
+                                            @Html.DisplayFor(modelItem => item.id)
+                                        </td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">
+                                            @Html.DisplayFor(modelItem => item.orderType)
+                                        </td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">
+                                            @Html.DisplayFor(modelItem => item.productDesc)
+                                        </td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">
+                                            @Html.DisplayFor(modelItem => item.flavor1)
+                                        </td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">
+                                            @Html.DisplayFor(modelItem => item.flavor2)
+                                        </td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">
+                                            @Html.DisplayFor(modelItem => item.cover)
+                                        </td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">
+                                            @Html.DisplayFor(modelItem => item.addOn1)
+                                        </td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">
+                                            @Html.DisplayFor(modelItem => item.addOn2)
+                                        </td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">
+                                            @Html.DisplayFor(modelItem => item.clientName)
+                                        </td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">
+                                            @Html.DisplayFor(modelItem => item.clientPhone)
+                                        </td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">
+                                            @Html.DisplayFor(modelItem => item.clientSchedule)
+                                        </td>
+                                        <td class="px-6 py-4 text-sm text-gray-500">
+                                            @Html.DisplayFor(modelItem => item.status)
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    $(document).ready(function () {
+        $('#myTable').DataTable();
+    });
+</script>

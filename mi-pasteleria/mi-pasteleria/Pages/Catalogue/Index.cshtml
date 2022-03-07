@@ -1,0 +1,137 @@
+﻿@page
+@model IndexModel
+@{
+    ViewBag.Title = "Catálogo";
+}
+
+<section class="py-20 bg-white">
+    <div class="container max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold tracking-tight text-center">Nuestro Catálogo</h2>
+        <p class="mt-2 text-lg text-center text-gray-600">Elige uno de nuestros deliciosos pasteles.</p>
+        <div class="grid grid-cols-4 gap-8 mt-10 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0">
+            <div class="relative flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-100 sm:rounded-xl">
+                <div class="p-3 text-white bg-blue-500 rounded-full">
+                    <img class="rounded-full" src="~/img/pastel-tentacion-mango.jpeg" />
+                </div>
+                <h4 class="text-xl font-medium text-gray-700">Tentación de mango</h4>
+                <a asp-area="" asp-page="/Catalogue/Complement" asp-route-id="1" class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-indigo-600 rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto">
+                    Comprar
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+            <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
+                <div class="p-3 text-white bg-blue-500 rounded-full">
+                    <img class="rounded-full" src="~/img/pastel-tentacion-fresa.jpeg" />
+                </div>
+                <h4 class="text-xl font-medium text-gray-700">Tentación de fresa</h4>
+                <a asp-area="" asp-page="/Catalogue/Complement" asp-route-id="2" class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-indigo-600 rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto">
+                    Comprar
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+            <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
+                <div class="p-3 text-white bg-blue-500 rounded-full">
+                    <img class="rounded-full" src="~/img/pastel-tentacion-mangofresa.jpeg" />
+                </div>
+                <h4 class="text-xl font-medium text-gray-700">Tentación de mango-fresa</h4>
+                <a asp-area="" asp-page="/Catalogue/Complement" asp-route-id="3" class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-indigo-600 rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto">
+                    Comprar
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+            <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
+                <div class="p-3 text-white bg-blue-500 rounded-full">
+                    <img class="rounded-full" src="~/img/pastel-tentacion-nutella.jpeg" />
+                </div>
+                <h4 class="text-xl font-medium text-gray-700">Tentación de Nutella®</h4>
+                <a asp-area="" asp-page="/Catalogue/Complement" asp-route-id="3" class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-indigo-600 rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto">
+                    Comprar
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+            <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
+                <div class="p-3 text-white bg-blue-500 rounded-full">
+                    <img class="rounded-full" src="~/img/pastel-nevado-fresa.jpeg" />
+                </div>
+                <h4 class="text-xl font-medium text-gray-700">Nevado de fresa</h4>
+                <a asp-area="" asp-page="/Catalogue/Complement" asp-route-id="5" class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-indigo-600 rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto">
+                    Comprar
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+            <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
+                <div class="p-3 text-white bg-blue-500 rounded-full">
+                    <img class="rounded-full" src="~/img/pastel-nevado-nuez.jpeg" />
+                </div>
+                <h4 class="text-xl font-medium text-gray-700">Nevado de nuez</h4>
+                <a asp-area="" asp-page="/Catalogue/Complement" asp-route-id="6" class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-indigo-600 rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto">
+                    Comprar
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+            <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
+                <div class="p-3 text-white bg-blue-500 rounded-full">
+                    <img class="rounded-full" src="~/img/pastel-nevado-milkyway.jpeg" />
+                </div>
+                <h4 class="text-xl font-medium text-gray-700">Nevado de MilkyWay®</h4>
+                <a asp-area="" asp-page="/Catalogue/Complement" asp-route-id="7" class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-indigo-600 rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto">
+                    Comprar
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+            <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
+                <div class="p-3 text-white bg-blue-500 rounded-full">
+                    <img class="rounded-full" src="~/img/pastel-nevado-oreo.jpeg" />
+                </div>
+                <h4 class="text-xl font-medium text-gray-700">Nevado de Oreo®</h4>
+                <a asp-area="" asp-page="/Catalogue/Complement" asp-route-id="8" class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-indigo-600 rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto">
+                    Comprar
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+            <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
+                <div class="p-3 text-white bg-blue-500 rounded-full">
+                    <img class="rounded-full" src="~/img/pastel-chocolate-tortuga.jpeg" />
+                </div>
+                <h4 class="text-xl font-medium text-gray-700">Chocolate tortuga</h4>
+                <a asp-area="" asp-page="/Catalogue/Complement" asp-route-id="9" class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-indigo-600 rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto">
+                    Comprar
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+            <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
+                <div class="p-3 text-white bg-blue-500 rounded-full">
+                    <img class="rounded-full" src="~/img/pastel-chocolate-aleman.jpeg" />
+                </div>
+                <h4 class="text-xl font-medium text-gray-700">Chocolate alemán</h4>
+                <a asp-area="" asp-page="/Catalogue/Complement" asp-route-id="10" class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-indigo-600 rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto">
+                    Comprar
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+            <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
+                <div class="p-3 text-white bg-blue-500 rounded-full">
+                    <img class="rounded-full" src="~/img/pastel-chocolate-bombon.jpeg" />
+                </div>
+                <h4 class="text-xl font-medium text-gray-700">Chocolate bombon</h4>
+                <a asp-area="" asp-page="/Catalogue/Complement" asp-route-id="11" class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-indigo-600 rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto">
+                    Comprar
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+            <div class="flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl">
+                <div class="p-3 text-white bg-blue-500 rounded-full">
+                    <img class="rounded-full" src="~/img/pastel-chocolate-carlosv.jpeg" />
+                </div>
+                <h4 class="text-xl font-medium text-gray-700">Chocolate Carlos V®</h4>
+                <a asp-area="" asp-page="/Catalogue/Complement" asp-route-id="12" class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-indigo-600 rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto">
+                    Comprar
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+        </div>
+        <div class="mt-10 px-4 py-3 bg-gray-50 text-right sm:px-6">
+            <a asp-page="/Index" type="button" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Volver a Inicio</a>
+        </div>
+    </div>
+</section>

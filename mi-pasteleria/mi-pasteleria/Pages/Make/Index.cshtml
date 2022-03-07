@@ -1,0 +1,265 @@
+﻿@page
+@model IndexModel
+@{
+    ViewBag.Title = "Arma tu pastel";
+}
+
+<div class="grid place-items-center">
+    <div class="mt-10 sm:mt-0">
+        <div class="mt-5 md:mt-0">
+            <div class="px-4 sm:px-0">
+                <h3 class="text-center text-lg font-medium leading-6 text-gray-900">Arma tu pastel</h3>
+                <p class="text-center mt-1 text-sm text-gray-600">Puede elegir entre los diferentes sabores y adornos.</p>
+                <p class="text-center mt-1 text-sm text-gray-600">(Puedes combinarlos a tu gusto)</p>
+            </div>
+            <form name="armar" method="post">
+                <div class="shadow overflow-hidden sm:rounded-md">
+                    <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+                        <fieldset>
+                            <div>
+                                <legend class="text-base font-medium text-gray-900">Sabores</legend>
+                                <p class="text-sm text-gray-500">Seleccionar el sabor o sabores del pan de tu pastel.</p>
+                                <p class="text-sm text-gray-500 text-right">(Maximo 2)</p>
+                            </div>
+                            <div class="mt-4 space-y-4">
+                                <div class="grid grid-cols-3">
+                                    <div class="flex items-start mb-2">
+                                        <div class="flex items-center h-5">
+                                            <input id="vainilla" name="sabor" onclick="chkcontrol1(0)" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                        </div>
+                                        <div class="ml-3 text-sm">
+                                            <label for="vainilla" class="font-medium text-gray-700">Vainilla</label>
+                                            <div class="w-10 h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
+                                                <img src="~/img/sabor-vainilla.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start mb-2">
+                                        <div class="flex items-center h-5">
+                                            <input id="chcolate" name="sabor" onclick="chkcontrol1(1)" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                        </div>
+                                        <div class="ml-3 text-sm mb-2">
+                                            <label for="chocolate" class="font-medium text-gray-700">Chocolate</label>
+                                            <div class="w-10 h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
+                                                <img src="~/img/sabor-chocolate.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start mb-2">
+                                        <div class="flex items-center h-5">
+                                            <input id="redvelvet" name="sabor" onclick="chkcontrol1(2)" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                        </div>
+                                        <div class="ml-3 text-sm mb-2">
+                                            <label for="redvelvet" class="font-medium text-gray-700">Red Velvet</label>
+                                            <div class="w-10 h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
+                                                <img src="~/img/sabor-redvelvet.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start mb-2">
+                                        <div class="flex items-center h-5">
+                                            <input id="almendra" name="sabor" onclick="chkcontrol1(3)" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                        </div>
+                                        <div class="ml-3 text-sm mb-2">
+                                            <label for="almendra" class="font-medium text-gray-700">Almendra</label>
+                                            <div class="w-10 h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
+                                                <img src="~/img/sabor-almendra.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start mb-2">
+                                        <div class="flex items-center h-5">
+                                            <input id="limon" name="sabor" onclick="chkcontrol1(4)" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                        </div>
+                                        <div class="ml-3 text-sm">
+                                            <label for="limon" class="font-medium text-gray-700">Limón</label>
+                                            <div class="w-10 h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
+                                                <img src="~/img/sabor-limon.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start mb-2">
+                                        <div class="flex items-center h-5">
+                                            <input id="champagne" name="sabor" onclick="chkcontrol1(5)" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                        </div>
+                                        <div class="ml-3 text-sm">
+                                            <label for="champagne" class="font-medium text-gray-700">Champagne</label>
+                                            <div class="w-10 h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
+                                                <img src="~/img/sabor-champagne.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start mb-2">
+                                        <div class="flex items-center h-5">
+                                            <input id="zanahoria" name="sabor" onclick="chkcontrol1(6)" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                        </div>
+                                        <div class="ml-3 text-sm">
+                                            <label for="zanahoria" class="font-medium text-gray-700">Zanahoria</label>
+                                            <div class="w-10 h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
+                                                <img src="~/img/sabor-zanahoria.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start mb-2">
+                                        <div class="flex items-center h-5">
+                                            <input id="caramelo" name="sabor" onclick="chkcontrol1(7)" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                        </div>
+                                        <div class="ml-3 text-sm">
+                                            <label for="caramelo" class="font-medium text-gray-700">Caramelo</label>
+                                            <div class="w-10 h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
+                                                <img src="~/img/sabor-caramelo.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start mb-2">
+                                        <div class="flex items-center h-5">
+                                            <input id="calabaza" name="sabor" onclick="chkcontrol1(8)" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                        </div>
+                                        <div class="ml-3 text-sm">
+                                            <label for="calabaza" class="font-medium text-gray-700">Calabaza</label>
+                                            <div class="w-10 h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
+                                                <img src="~/img/sabor-calabaza.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div>
+                                <legend class="text-base font-medium text-gray-900">Cobertura</legend>
+                                <p class="text-sm text-gray-500">Selecciona la cobertura para tu pastel.</p>
+                                <p class="text-sm text-gray-500 text-right">(Maximo 1)</p>
+                            </div>
+                            <div class="mt-4 space-y-4">
+                                <div class="grid grid-cols-2">
+                                    <div class="flex items-start mb-2">
+                                        <div class="flex items-center h-5">
+                                            <input id="cremabatida" name="cobertura" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                                        </div>
+                                        <div class="ml-3 text-sm">
+                                            <label for="cremabatida" class="font-medium text-gray-700">Crema batida</label>
+                                            <div class="w-10 h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
+                                                <img src="~/img/cubierta-cremabatida.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start mb-2">
+                                        <div class="flex items-center h-5">
+                                            <input id="fondant" name="cobertura" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                                        </div>
+                                        <div class="ml-3 text-sm">
+                                            <label for="fondant" class="font-medium text-gray-700">Fondant</label>
+                                            <div class="w-10 h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
+                                                <img src="~/img/cubierta-fondant.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start mb-2">
+                                        <div class="flex items-center h-5">
+                                            <input id="buttercream" name="cobertura" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                                        </div>
+                                        <div class="ml-3 text-sm">
+                                            <label for="buttercream" class="font-medium text-gray-700">Buttercream</label>
+                                            <div class="w-10 h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
+                                                <img src="~/img/cubierta-buttercream.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start mb-2">
+                                        <div class="flex items-center h-5">
+                                            <input id="merengue" name="cobertura" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                                        </div>
+                                        <div class="ml-3 text-sm">
+                                            <label for="merengue" class="font-medium text-gray-700">Merengue</label>
+                                            <div class="w-10 h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
+                                                <img src="~/img/cubierta-merengue.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start mb-2">
+                                        <div class="flex items-center h-5">
+                                            <input id="ganache" name="cobertura" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                                        </div>
+                                        <div class="ml-3 text-sm">
+                                            <label for="ganache" class="font-medium text-gray-700">Ganache</label>
+                                            <div class="w-10 h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
+                                                <img src="~/img/cubierta-ganache.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start mb-2">
+                                        <div class="flex items-center h-5">
+                                            <input id="quesocrema" name="cobertura" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                                        </div>
+                                        <div class="ml-3 text-sm mb-2">
+                                            <label for="quesocrema" class="font-medium text-gray-700">Queso crema</label>
+                                            <div class="w-10 h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
+                                                <img src="~/img/cubierta-quesocrema.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div>
+                                <legend class="text-base font-medium text-gray-900">Adornos</legend>
+                                <p class="text-sm text-gray-500">Seleccionar el adorno o adornos de tu pastel.</p>
+                                <p class="text-sm text-gray-500 text-right">(Maximo 2)</p>
+                            </div>
+                            <div class="mt-4 space-y-4">
+                                <div class="grid grid-cols-1">
+                                    <div class="flex items-start mb-2">
+                                        <div class="flex items-center h-5">
+                                            <input id="numeros" name="adorno" onclick="chkcontrol2(0)" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                        </div>
+                                        <div class="ml-3 text-sm">
+                                            <label for="numeros" class="font-medium text-gray-700">Numeros</label>
+                                            <div class="mb-2 w-20 h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
+                                                <img src="~/img/adorno-numeros.png">
+                                            </div>
+                                            <label for="valnumeros" class="block text-sm font-medium text-gray-700">Especifique (Max. 4 digitos)</label>
+                                            <input type="number" name="valnumeros" id="valnumeros" placeholder="16" maxlength="4" autocomplete="off" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start mb-2">
+                                        <div class="flex items-center h-5">
+                                            <input id="letras" name="adorno" onclick="chkcontrol2(1)" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                        </div>
+                                        <div class="ml-3 text-sm mb-2">
+                                            <label for="chocolate" class="font-medium text-gray-700">Letras</label>
+                                            <div class="mb-2 w-20 h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
+                                                <img src="~/img/adorno-letras.png">
+                                            </div>
+                                            <label for="valletras" class="block text-sm font-medium text-gray-700">Especifique (Max. 30 caracteres)</label>
+                                            <input type="text" name="valletras" id="valletras" placeholder="Mis dulces 16" maxlength="30" autocomplete="off" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start mb-2">
+                                        <div class="flex items-center h-5">
+                                            <input id="personaje" name="adorno" onclick="chkcontrol2(2)" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                        </div>
+                                        <div class="ml-3 text-sm mb-2">
+                                            <label for="personaje" class="font-medium text-gray-700">Personaje</label>
+                                            <div class="mb-2 w-20 h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
+                                                <img src="~/img/adorno-personaje.png">
+                                            </div>
+                                            <label for="valpersonaje" class="block text-sm font-medium text-gray-700">Especifique (Max. 30 caracteres)</label>
+                                            <input type="text" name="valpersonaje" id="valpersonaje" placeholder="Spider-Man" maxlength="30" autocomplete="off" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+                        <button asp-page-handler="Quote" type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Cotizar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/limitCheckboxSelection.js"></script>
